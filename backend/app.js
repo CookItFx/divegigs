@@ -13,6 +13,6 @@ mongoose.connect('mongodb://localhost/divegigs', {
 													user: "matt", 
 													pass: "@dg2020"
 												}, function(err) {
-													if(error) console.log(error);
+													if(err) console.log(error);
 													console.log("connection successful");
 												});
