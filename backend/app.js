@@ -12,10 +12,7 @@ mongoose.connect('mongodb://localhost/divegigs', {
 													auth: { "authSource": "divegigs" }, 
 													user: "matt", 
 													pass: "@dg2020"
+												}, function(err) {
+													if(error) console.log(error);
+													console.log("connection successful");
 												});
-
-var db = Mongoose.connect('mongodb://localhost/dbname', function(error){
-    if(error) console.log(error);
-
-        console.log("connection successful");
-});
