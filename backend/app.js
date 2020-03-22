@@ -6,7 +6,7 @@ const router = express.Router();
 mongoose.Promise = global.Promise;
 
 //db connect
-mongoose.connect('mongodb://77.68.91.80:27017/divegigs', {	
+mongoose.connect('mongodb://localhost/divegigs', {	
 													useNewUrlParser: true, 
 													useUnifiedTopology: true, 
 													auth: { "authSource": "divegigs" }, 
@@ -14,4 +14,8 @@ mongoose.connect('mongodb://77.68.91.80:27017/divegigs', {
 													pass: "@dg2020"
 												});
 
+var db = Mongoose.connect('mongodb://localhost/dbname', function(error){
+    if(error) console.log(error);
 
+        console.log("connection successful");
+});
