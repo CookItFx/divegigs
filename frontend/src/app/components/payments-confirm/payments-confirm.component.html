@@ -1,0 +1,174 @@
+<div class="main mt-5">
+    <div class="contact-content">
+        <div class="container">
+      
+            <div class="row">
+                <div class="col-md-12">
+                    <h3 class="title">Confirm</h3>
+                    <p class="description"></p>
+                </div>
+            </div>
+    
+            <div class="featurette-divider fd-100"></div>  
+        
+            <div class="row">
+                <div class="col-sm-7 ml-auto mr-auto">
+
+                    <div class="row">
+                        <div class="col-md-12 ml-auto mr-auto">     
+                            
+                            <!-- confirm  -->
+                            <div class="text-left">         
+                                
+                              <img src="assets/store/creditcardicons.png" class="img img-fluid"/> 
+                              
+                              <form role="form" id="contact-form" method="post" class="mt-5">
+                                
+                                    <h4><strong>Contact address</strong></h4> 
+                                    
+                                    <div class="form-group">
+                                      <label for="street" class="bmd-label-floating">Street</label>
+                                      <input type="text" class="form-control" id="street">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="address" class="bmd-label-floating">Address</label>
+                                        <input type="text" class="form-control" id="address">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="city" class="bmd-label-floating">City</label>
+                                        <input type="text" class="form-control" id="city">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="state_region" class="bmd-label-floating">State/Region</label>
+                                        <input type="text" class="form-control" id="state_region">
+                                    </div>
+                                    <div class="row">
+                                      <div class="col-sm-4">
+                                        <div class="form-group">
+                                            <label for="zip_postal" class="bmd-label-floating">Zip/Postal code</label>
+                                            <input type="text" class="form-control" id="zip_postal">
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="form-group">
+                                      <label for="email" class="bmd-label-floating">Email address</label>
+                                      <input type="email" class="form-control" id="email">
+                                      <span class="bmd-help">We'll never share your email with anyone else.</span>
+                                    </div>
+                                    <div class="form-group">
+                                      <label for="contact_number" class="bmd-label-floating">Contact number</label>
+                                      <input type="number" class="form-control" id="contact_number">
+                                    </div>
+                                
+                                    <h4 class="mt-5"><strong>Billing payment</strong></h4> 
+                                    
+                                    <div class="form-group">
+                                      <label for="card_name" class="bmd-label-floating">Name on card</label>
+                                      <input type="text" class="form-control" id="card_name">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="card_number" class="bmd-label-floating">Card number</label>
+                                        <input type="number" class="form-control" id="card_number">
+                                    </div>
+                                    <div class="row">
+                                      <div class="col-sm-4">
+                                          <div class="form-group">
+                                            <label for="card_cvv" class="bmd-label-floating">CVV</label>
+                                            <input type="text" class="form-control" id="card_cvv">
+                                           </div>
+                                      </div>
+                                    </div>
+                                    <div class="row mt-3">
+                                      <div class="col">
+                                        <div class="form-group">
+                                        <select id="card_month" class="selectpicker" title="Expiry month" data-style="select-with-transition" data-size="7" tabindex="-98">
+                                            <option disabled=""> Choose month</option>
+                                            <option value="1">January</option>
+                                            <option value="2">February</option>
+                                            <option value="3">March</option>
+                                            <option value="4">April</option>
+                                            <option value="5">May</option>
+                                            <option value="6">June</option>
+                                            <option value="7">July</option>
+                                            <option value="8">August</option>
+                                            <option value="9">September</option>
+                                            <option value="10">October</option>
+                                            <option value="11">November</option>
+                                            <option value="12">December</option>
+                                          </select>  
+                                        </div>
+                                      </div>
+                                      <div class="col">
+                                        <div class="form-group">
+                                            <select id="card_year" class="selectpicker" title="Expiry year" data-style="select-with-transition"  data-size="5" tabindex="-98">
+                                                <option disabled=""> Choose month</option>
+                                                <option value="2024">2024</option>
+                                                <option value="2023">2023</option>
+                                                <option value="2022">2022</option>
+                                                <option value="2021">2021</option>
+                                                <option value="2020">2020</option>
+                                              </select> 
+                                        </div>
+                                      </div>
+                                    </div>
+
+                                    <div class="submit mt-5">
+                                        <a routerLink="/payments/book/authorise" [queryParams]="{
+                                                                                                  book_id: '54tg345435f545',
+                                                                                                  host_id: '6564556',
+                                                                                                  experience_id: '56454'}">
+                                            <button class="btn btn-rose btn-round">Make payment</button>
+                                        </a> 
+                                        <div class="ripple-container"></div>
+                                    </div>
+                                  </form>                       
+                           </div> 
+                                
+                           
+
+                        </div>  
+                    </div><!-- ./row--> 
+
+                </div> 
+                <div class="col-sm-5 ml-auto mr-auto mt-5">
+                                                       
+                    <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative p-2">
+                        <div class="col p-0 d-flex flex-column position-static">
+                            <strong class="d-inline-block m-0">Island Hopping</strong>        
+                            <strong class="d-inline-block m-0">Cebu, Philippines</strong>
+                            <p class="flex-shrink-1 mb-0 card-stars text-xs mb-3">
+                              <i class="fa fa-star text-warning"></i>
+                              <i class="fa fa-star text-warning"></i>
+                              <i class="fa fa-star text-warning"></i>
+                              <i class="fa fa-star text-gray-300"></i>
+                              <i class="fa fa-star text-gray-300"></i>
+                            </p>
+                                  
+                        </div>
+                        <div class="col-auto d-lg-block">
+                            <img src="assets/store/pictures/exp/adv_1175410_1280.jpg" alt="Island Hopping" class="img" width="140px" height="100px">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12"><i class="fa fa-user mr-2"></i> Guests 1</div>
+                        <div class="col-md-12"><i class="fa fa-calendar"></i> 12 May 2020</div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col">$75 x 1</div>
+                        <div class="col text-right">$75</div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col txb">Total (USD)</div>
+                        <div class="col text-right txb">$75</div>
+                    </div>
+                                                                       
+                </div>
+            </div>
+
+        </div> 
+    </div> 
+</div> 
+
+

@@ -1,0 +1,102 @@
+<nav class="navbar navbar-color-on-scroll fixed-top navbar-expand-lg navbar-transparent" color-on-scroll="100" id="sectionsNav">
+    <div class="container-fluid">
+      <div class="navbar-translate">
+ 
+        <div class="d-flex flex-grow-1">
+          <a class="navbar-brand" routerLink="/" style="text-decoration: none !important;">
+            <img src="assets/store/favicons/favicon-32x32.png" alt="">
+            <strong class="nba ml-3 font-weight-bold">Divegigs</strong></a>
+          <form class="mr-2 my-auto w-100 d-inline-block order-1">
+              <div class="nbg input-group">
+                  <input type="text" role="search" name="q" class="nbs form-control" placeholder='Try "Philippines"'>
+                       
+                  <span class="dropdown nav-item">
+                    <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
+                      <i class="fa fa-search"></i>
+                    <div class="ripple-container"></div></a>
+                    <div class="dropdown-menu dropdown-with-icons">
+                      <a class="dropdown-item">All</a>
+                      <a class="dropdown-item">Diveboards</a>
+                      <a class="dropdown-item">Experiences</a>
+                      <a class="dropdown-item">Adventures</a>
+                    </div>         
+                  </span>                 
+
+              </div>
+          </form>
+      </div>        
+       
+        <button class="navbar-toggler" type="button" data-toggle="collapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="navbar-toggler-icon"></span>
+          <span class="navbar-toggler-icon"></span>
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+      <div class="collapse navbar-collapse">
+        <ul class="navbar-nav ml-auto">
+        
+          <li class="dropdown nav-item">
+            <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
+              <strong>Discover</strong>
+            <div class="ripple-container"></div></a>
+            <div class="dropdown-menu dropdown-with-icons">
+              <a [routerLink]="['/s/diveboards']" [queryParams]="{search_type: 'header'}" class="dropdown-item">Diveboards</a>
+              <a [routerLink]="['/s/experiences']" [queryParams]="{search_type: 'header'}" class="dropdown-item">Experiences</a>
+              <a [routerLink]="['/s/adventures']" [queryParams]="{search_type: 'header'}" class="dropdown-item">Adventures</a>
+              <a [routerLink]="['/s/destinations']" [queryParams]="{search_type: 'header'}" class="dropdown-item">Destinations</a>
+              <a [routerLink]="['/s/gear']" [queryParams]="{search_type: 'header'}" class="dropdown-item">Gear &amp; Equipment</a>
+            </div>         
+        </li>
+          <!---
+          <li class="nav-item"><a routerLink="login" class="nav-link"><strong>Log In</strong></a></li>
+          <li class="nav-item"><a routerLink="signup" class="nav-link"><strong>Sign Up</strong></a></li>
+          <li class="dropdown nav-item">
+            <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
+              <strong><i class="fa fa-info-circle"></i></strong>
+            <div class="ripple-container"></div></a>
+            <div class="dropdown-menu dropdown-with-icons">
+              <a routerLink="about-us" class="dropdown-item">About Us</a>
+              <a routerLink="contact-us" class="dropdown-item">Contact Us</a>
+              <a routerLink="privacy" class="dropdown-item">Privacy Policies</a>
+              <a routerLink="terms" class="dropdown-item">Terms of Use</a>
+              <a routerLink="site-map" class="dropdown-item">Site Map</a>
+            </div>         
+        </li>--> 
+        <li class="nav-item"><a routerLink="experience-hosting/listings" [queryParams]="{ref: 'nav'}" class="nav-link"><strong>Experiences</strong></a></li>
+        <li class="nav-item"><a routerLink="saved" class="nav-link"><strong>Saved</strong></a></li>
+        <li class="nav-item"><a routerLink="trips" class="nav-link"><strong>Trips</strong></a></li>
+        
+        <li class="nav-item">
+          <a class="nav-link" data-toggle="dropdown"><strong>Messages</strong>
+            <div class="ripple-container"></div>
+          </a>
+        </li>        
+        
+        <li class="dropdown nav-item">
+          <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
+            <strong>Help</strong>
+          <div class="ripple-container"></div></a>
+          <div class="dropdown-menu dropdown-with-icons">
+            <a routerLink="help/advice" class="dropdown-item">Advice</a>
+            <a routerLink="help/communities" class="dropdown-item">Communities</a>
+            <a routerLink="help/environment" class="dropdown-item">Environment</a>
+            <a routerLink="help/marine-life" class="dropdown-item">Marine Life</a>
+            <a routerLink="help" class="dropdown-item btn btn-info border-top">Help Center</a>
+          </div>         
+      </li>
+      <li class="dropdown nav-item">
+        <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
+          <img class="img-fluid" src="assets/store/faces/christian.jpg" width="25" height="25" alt="" style="border-radius: 50%;">
+        <div class="ripple-container"></div></a>
+        <div class="dropdown-menu dropdown-with-icons">
+          <a routerLink="u/show/55434" class="dropdown-item">Profile</a>
+          <a routerLink="account-settings" class="dropdown-item">Account</a>
+          <a class="dropdown-item btn btn-info">Log Out</a>
+        </div>         
+    </li>
+
+        </ul>
+      </div>
+    </div>
+  </nav>
