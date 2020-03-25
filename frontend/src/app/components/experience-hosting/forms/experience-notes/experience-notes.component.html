@@ -1,0 +1,68 @@
+<div class="main mt-5">
+    <div class="contact-content">
+        <div class="container">
+      
+            <div class="row">
+                <div class="col col-md-9">
+                    <h3 class="title">{{ pageHeading }} <small class="ml-4 text-muted">{{ pageSteps }}</small></h3>
+                    <p class="description">{{ pageDescription }}</p>
+                </div>
+                <div class="col col-md-3 text-right mt-3">
+                    <button class="btn btn-outline-primary btn-sm">Save & Exit</button>
+                </div>
+            </div>
+    
+            <div class="featurette-divider fd-100"></div>  
+        
+            <div class="row mt-5 justify-content-md-left">
+                <div class="col-sm-6 ml-auto mr-auto">
+
+                    <form [formGroup]="notesForm" (ngSubmit)="onSubmit()">
+                        <div class="mh-290">
+                                      
+                            <div class="form-group">
+                                <div class="form-group">
+                                    <label for="details" class="bmd-label-floating">Provide extra details so guests can be over-prepared</label>
+                                    <textarea id="details" formControlName="details" class="form-control" rows="6" [ngClass]="{ 'is-invalid': submitted && f.details.errors }"></textarea>
+                                    <div *ngIf="submitted && f.qualifications.errors" class="invalid-feedback">
+                                        <div *ngIf="f.details.errors.required">Details is required</div>
+                                    </div>
+                                </div>
+                            </div>
+                             
+                            <div class="form-group mt-5">
+                                <label for="nothing" class="bmd-label-floating">Is there nothing else guests should know?</label> 
+                                <div class="form-check mt-3">
+                                    <label class="form-check-label">
+                                      <input class="form-check-input" type="checkbox" value="">
+                                      I have no additional notes for my guests
+                                      <span class="form-check-sign">
+                                        <span class="check"></span>
+                                      </span>
+                                    </label>
+                                  </div>
+                            </div> 
+            
+                        </div>
+            
+                        <div class="form-group"><div id="form_callback"></div></div>
+            
+                        <div class="form-group mt-5">
+                            <a routerLink="{{ btnBackUrl }}">
+                              <button class="btn btn-outline-primary" type="button">Back</button>
+                            </a>
+                          <button id="btn-location" class="btn btn-danger pull-right" type="submit" data-json='{ "action":"", "auth":"", "pid":, "tkn":"", "uid":"" }'>
+                            <span class="btn_tx">{{ formBtnText }}</span>
+                          </button>
+                        </div>
+            
+                    </form>
+
+                </div> 
+                <div class="col-sm-6 ml-auto mr-auto"></div>
+            </div>
+
+        </div> 
+    </div> 
+</div> 
+

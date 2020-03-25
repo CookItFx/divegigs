@@ -1,0 +1,68 @@
+<div class="main mt-5">
+    <div class="contact-content">
+        <div class="container">
+      
+            <div class="row">
+                <div class="col col-md-9">
+                    <h3 class="title">{{ pageHeading }} <small class="ml-4 text-muted">{{ pageSteps }}</small></h3>
+                    <p class="description">{{ pageDescription }}</p>
+                </div>
+                <div class="col col-md-3 text-right mt-3">
+                    <button class="btn btn-outline-primary btn-sm">Save & Exit</button>
+                </div>
+            </div>
+    
+            <div class="featurette-divider fd-100"></div>  
+        
+            <div class="row mt-5 justify-content-md-left">
+                <div class="col-sm-6 ml-auto mr-auto">
+
+                    <form [formGroup]="pricingForm" (ngSubmit)="onSubmit()">
+                        <div class="mh-290">
+
+                            <p><strong>Individual rate</strong></p>
+              
+                            <div class="form-row align-items-center">
+                              <div class="col-sm-3">
+                                <label for="guest_pays"><small>Each guest pays</small></label>
+                                <div class="input-group mb-2">
+                                  <div class="input-group-prepend">
+                                    <div class="input-group-text">US</div>
+                                  </div>
+                                  <input id="guest_pays" formControlName="guest_pays" type="number" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.guest_pays.errors }" />
+                                  <div *ngIf="submitted && f.guest_pays.errors" class="invalid-feedback">
+                                      <div *ngIf="f.guest_pays.errors.required">xxx is required</div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-sm-3">
+                                <label for="you_earn"><small>You earn</small></label>
+                                <input id="you_earn" type="tel" class="form-control mb-2" placeholder="US" value="" disabled>
+                              </div>
+                            </div>              
+              
+                            <p class="my-3"><i class="fa fa-user mr-2"></i> <span>0</span> people x $<span id="you_earn_o">0</span> = $<span id="you_earn_t">0</span></p>
+            
+                        </div>
+            
+                        <div class="form-group"><div id="form_callback"></div></div>
+            
+                        <div class="form-group mt-5">
+                            <a routerLink="{{ btnBackUrl }}">
+                              <button class="btn btn-outline-primary" type="button">Back</button>
+                            </a>
+                          <button id="btn-location" class="btn btn-danger pull-right" type="submit" data-json='{ "action":"", "auth":"", "pid":, "tkn":"", "uid":"" }'>
+                            <span class="btn_tx">{{ formBtnText }}</span>
+                          </button>
+                        </div>
+            
+                    </form>
+
+                </div> 
+                <div class="col-sm-6 ml-auto mr-auto"></div>
+            </div>
+
+        </div> 
+    </div> 
+</div> 
+

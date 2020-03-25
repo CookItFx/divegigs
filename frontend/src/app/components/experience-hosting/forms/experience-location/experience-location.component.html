@@ -1,0 +1,67 @@
+<div class="main mt-5">
+    <div class="contact-content">
+        <div class="container">
+      
+            <div class="row">
+                <div class="col col-md-9">
+                    <h3 class="title">{{ pageHeading }} <small class="ml-4 text-muted">{{ pageSteps }}</small></h3>
+                    <p class="description">{{ pageDescription }}</p>
+                </div>
+                <div class="col col-md-3 text-right mt-3">
+                    <button class="btn btn-outline-primary btn-sm">Save & Exit</button>
+                </div>
+            </div>
+    
+            <div class="featurette-divider fd-100"></div>  
+        
+            <div class="row mt-5 justify-content-md-left">
+                <div class="col-sm-6 ml-auto mr-auto">
+
+                    <form [formGroup]="locationForm" (ngSubmit)="onSubmit()">
+                        <div class="mh-290">
+            
+                            <input id="street_address" type="hidden" name="street_address" value="">
+                            <input id="street_number" type="hidden" name="street_number" value="">       
+                            <input id="administrative_area_level_2" name="administrative_area_level_2" type="hidden" value="">
+                            <input id="administrative_area_level_3" name="administrative_area_level_3" type="hidden" value="">
+                            <input id="place_id" type="hidden" name="place_id" value="">
+                            <input id="route" name="route" type="hidden" value="">
+                            <input id="formatted_address" name="formatted_address" type="hidden" value="">
+                            <input id="lat" type="hidden" name="lat" value="">
+                            <input id="lng" type="hidden" name="lng" value="">
+                            <input id="sublocality" name="sublocality" type="hidden" value="">
+                            <input id="country" name="country" type="hidden" value="">
+                            <input id="address" name="address" type="hidden" value="">
+                            <input id="locality" name="locality" type="hidden" value="">
+                            <input id="administrative_area_level_1" name="country" type="hidden" value="">
+                            <input id="postal_code" name="postal_code" type="hidden" value="">
+                                       
+                            <!--google autocomplete-->
+                            <div class="form-group">
+                                <label for="autocomplete" class="bmd-label-floating">Where will you host your experience?</label>
+                                <input id="autocomplete" formControlName="autocomplete" type="text" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.autocomplete.errors }" />
+                                <div *ngIf="submitted && f.autocomplete.errors" class="invalid-feedback">
+                                    <div *ngIf="f.autocomplete.errors.required">Location is required</div>
+                                </div>
+                            </div>
+            
+                        </div>
+            
+                        <div class="form-group"><div id="form_callback"></div></div>
+            
+                        <div class="form-group mt-5">
+                          <button class="btn btn-danger pull-right" type="submit" data-json='{ "action":"", "auth":"", "pid":, "tkn":"", "uid":"" }'>
+                              <span class="btn_tx">{{ formBtnText }}</span>
+                          </button>
+                        </div>
+            
+                    </form>
+
+                </div> 
+                <div class="col-sm-6 ml-auto mr-auto"></div>
+            </div>
+
+        </div> 
+    </div> 
+</div> 
+

@@ -8,7 +8,7 @@ import { Meta, Title }  from '@angular/platform-browser';
 })
 export class ExperienceHostingComponent implements OnInit {
   
-  title = 'Experience | Create';
+  title = 'Your experiences';
 
   constructor(private meta: Meta, private titleService: Title) {
     

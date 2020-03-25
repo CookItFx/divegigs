@@ -1,0 +1,215 @@
+<div class="main mt-5">
+    <div class="contact-content">
+        <div class="container">
+      
+            <div class="row">
+                <div class="col col-md-9">
+                    <h3 class="title">{{ pageHeading }} <small class="ml-4 text-muted">{{ pageSteps }}</small></h3>
+                    <p class="description">{{ pageDescription }}</p>
+                </div>
+                <div class="col col-md-3 text-right mt-3">
+                    <button class="btn btn-outline-primary btn-sm">Save & Exit</button>
+                </div>
+            </div>
+    
+            <div class="featurette-divider fd-100"></div>  
+        
+            <div class="row mt-5 justify-content-md-left">
+                <div class="col-sm-6 ml-auto mr-auto">
+
+                    <form [formGroup]="backgroundForm" (ngSubmit)="onSubmit()">
+                        <div class="mh-290">
+                                      
+                            <div class="form-group">
+                                <label for="expertise" class="bmd-label-floating">What’s your expertise?</label>
+
+                                <div class="row mt-3">
+                                    <div class="col col-sm-4">  
+                                        <div class="form-check">
+                                            <label class="form-check-label">
+                                              <input class="form-check-input" type="checkbox" value="ent">
+                                              Entrepreneur
+                                              <span class="form-check-sign">
+                                                <span class="check"></span>
+                                              </span>
+                                            </label>
+                                          </div>
+                                    </div>
+                                    <div class="col col-sm-4">   
+                                        <div class="form-check">
+                                            <label class="form-check-label">
+                                              <input class="form-check-input" type="checkbox" value="vol">
+                                              Volunteer
+                                              <span class="form-check-sign">
+                                                <span class="check"></span>
+                                              </span>
+                                            </label>
+                                          </div>
+                                    </div>
+                                    <div class="col col-sm-4">  
+                                        <div class="form-check">
+                                            <label class="form-check-label">
+                                              <input class="form-check-input" type="checkbox" value="pro">
+                                              Professional
+                                              <span class="form-check-sign">
+                                                <span class="check"></span>
+                                              </span>
+                                            </label>
+                                          </div>
+                                    </div>
+                                </div>
+
+                                <div class="row mt-3">
+                                    <div class="col col-sm-4">  
+                                        <div class="form-check">
+                                            <label class="form-check-label">
+                                              <input class="form-check-input" type="checkbox" value="gui">
+                                              Guide
+                                              <span class="form-check-sign">
+                                                <span class="check"></span>
+                                              </span>
+                                            </label>
+                                          </div>
+                                    </div>
+                                    <div class="col col-sm-4">   
+                                        <div class="form-check">
+                                            <label class="form-check-label">
+                                              <input class="form-check-input" type="checkbox" value="loc">
+                                              Local expert
+                                              <span class="form-check-sign">
+                                                <span class="check"></span>
+                                              </span>
+                                            </label>
+                                          </div>
+                                    </div>
+                                    <div class="col col-sm-4">  
+                                        <div class="form-check">
+                                            <label class="form-check-label">
+                                              <input class="form-check-input" type="checkbox" value="edu">
+                                              Educator
+                                              <span class="form-check-sign">
+                                                <span class="check"></span>
+                                              </span>
+                                            </label>
+                                          </div>
+                                    </div>
+                                </div>
+
+                                <div class="row mt-3">
+                                    <div class="col col-sm-4">  
+                                        <div class="form-check">
+                                            <label class="form-check-label">
+                                              <input class="form-check-input" type="checkbox" value="ins">
+                                              Instructor
+                                              <span class="form-check-sign">
+                                                <span class="check"></span>
+                                              </span>
+                                            </label>
+                                          </div>
+                                    </div>
+                                    <div class="col col-sm-4">
+                                    </div>
+                                    <div class="col col-sm-4"> 
+                                    </div>
+                                </div>
+                                      
+                                <div class="form-group mt-5">
+                                    <label for="experience" class="bmd-label-floating">Describe you and your experience?</label> 
+                                    <div class="form-check mt-3">
+                                        <label class="form-check-label">
+                                            <input class="form-check-input" type="radio" name="experience" value="" checked="">
+                                                I’m hosting by myself
+                                                <span class="circle">
+                                                <span class="check"></span>
+                                                </span>
+                                        </label>
+                                    </div> 
+                                    <div class="form-check mt-3">
+                                        <label class="form-check-label">
+                                            <input class="form-check-input" type="radio" name="experience" value="">
+                                                I have a team who helps me host
+                                                <span class="circle">
+                                                 <span class="check"></span>
+                                                </span>
+                                        </label>
+                                    </div>
+                                </div>
+                                      
+                                <div class="form-group mt-5">
+                                    <label for="activity" class="bmd-label-floating">Have you hosted this activity before?</label> 
+                                    <div class="form-check mt-3">
+                                        <label class="form-check-label">
+                                            <input class="form-check-input" type="radio" name="activity" value="" checked="">
+                                                Yes, I’ve hosted this activity before
+                                                <span class="circle">
+                                                <span class="check"></span>
+                                                </span>
+                                         </label>
+                                    </div>  
+                                    <div class="form-check mt-3">
+                                        <label class="form-check-label">
+                                            <input class="form-check-input" type="radio" name="activity" value="">
+                                                No, I’ve never hosted this activity before
+                                                <span class="circle">
+                                                <span class="check"></span>
+                                                </span>
+                                        </label>
+                                    </div>
+                                </div>
+                                      
+                                <div class="form-group mt-5">
+                                    <label for="practicing" class="bmd-label-floating">How long have you been practicing, studying or teaching the activity that you’ll be hosting?</label>
+                                            <div class="form-check mt-3">
+                                                <label class="form-check-label">
+                                                  <input class="form-check-input" type="radio" name="practicing" value="" checked="">
+                                                  Less than a year
+                                                  <span class="circle">
+                                                    <span class="check"></span>
+                                                  </span>
+                                                </label>
+                                              </div>
+                                            <div class="form-check mt-3">
+                                                <label class="form-check-label">
+                                                  <input class="form-check-input" type="radio" name="practicing" value="">
+                                                  1 – 4 years
+                                                  <span class="circle">
+                                                    <span class="check"></span>
+                                                  </span>
+                                                </label>
+                                              </div>  
+                                            <div class="form-check mt-3">
+                                                <label class="form-check-label">
+                                                  <input class="form-check-input" type="radio" name="practicing" value="">
+                                                  5+ years
+                                                  <span class="circle">
+                                                    <span class="check"></span>
+                                                  </span>
+                                                </label>
+                                              </div>
+                                </div>
+
+                            </div>
+            
+                        </div>
+            
+                        <div class="form-group"><div id="form_callback"></div></div>
+            
+                        <div class="form-group mt-5">
+                            <a routerLink="{{ btnBackUrl }}">
+                              <button class="btn btn-outline-primary" type="button">Back</button>
+                            </a>
+                          <button id="btn-location" class="btn btn-danger pull-right" type="submit" data-json='{ "action":"", "auth":"", "pid":, "tkn":"", "uid":"" }'>
+                            <span class="btn_tx">{{ formBtnText }}</span>
+                          </button>
+                        </div>
+            
+                    </form>
+
+                </div> 
+                <div class="col-sm-6 ml-auto mr-auto"></div>
+            </div>
+
+        </div> 
+    </div> 
+</div> 
+

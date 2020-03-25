@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { MainComponent } from './components/main/main.component';
 
@@ -39,8 +38,6 @@ import { UShowComponent } from './components/u-show/u-show.component';
 
 import { SiteMapComponent } from './components/site-map/site-map.component';
 
-import { ExperienceHostingComponent } from './components/experience-hosting/experience-hosting.component';
-
 import { SavedComponent } from './components/saved/saved.component';
 import { TripsComponent } from './components/trips/trips.component';
 
@@ -59,6 +56,29 @@ import { PaymentsConfirmComponent } from './components/payments-confirm/payments
 import { PaymentsAuthoriseComponent } from './components/payments-authorise/payments-authorise.component';
 import { InboxComponent } from './components/inbox/inbox.component';
 import { ReviewsComponent } from './components/reviews/reviews.component';
+
+/* experience-hosting */
+import { ExperienceHostingComponent } from './components/experience-hosting/experience-hosting.component';
+import { ExperienceHostingCreateComponent } from './components/experience-hosting-create/experience-hosting-create.component';
+import { ExperienceLocationComponent } from './components/experience-hosting/forms/experience-location/experience-location.component';
+import { ExperienceTypeComponent } from './components/experience-hosting/forms/experience-type/experience-type.component';
+import { ExperienceYourLanguagesComponent } from './components/experience-hosting/forms/experience-your-languages/experience-your-languages.component';
+import { ExperienceYourBackgroundComponent } from './components/experience-hosting/forms/experience-your-background/experience-your-background.component';
+import { ExperienceAboutYouComponent } from './components/experience-hosting/forms/experience-about-you/experience-about-you.component';
+import { ExperienceWhatWillYouDoComponent } from './components/experience-hosting/forms/experience-what-will-you-do/experience-what-will-you-do.component';
+import { ExperienceDescribeEachPlaceComponent } from './components/experience-hosting/forms/experience-describe-each-place/experience-describe-each-place.component';
+import { ExperienceWhatIWillProvideComponent } from './components/experience-hosting/forms/experience-what-iwill-provide/experience-what-iwill-provide.component';
+import { ExperienceGuestsShouldBringComponent } from './components/experience-hosting/forms/experience-guests-should-bring/experience-guests-should-bring.component';
+import { ExperienceTitleComponent } from './components/experience-hosting/forms/experience-title/experience-title.component';
+import { ExperiencePhotosComponent } from './components/experience-hosting/forms/experience-photos/experience-photos.component';
+import { ExperienceMapComponent } from './components/experience-hosting/forms/experience-map/experience-map.component';
+import { ExperienceNotesComponent } from './components/experience-hosting/forms/experience-notes/experience-notes.component';
+import { ExperienceGuestsRequirementsComponent } from './components/experience-hosting/forms/experience-guests-requirements/experience-guests-requirements.component';
+import { ExperienceGuestsSizeComponent } from './components/experience-hosting/forms/experience-guests-size/experience-guests-size.component';
+import { ExperienceGuestsDurationComponent } from './components/experience-hosting/forms/experience-guests-duration/experience-guests-duration.component';
+import { ExperienceGuestsPricingComponent } from './components/experience-hosting/forms/experience-guests-pricing/experience-guests-pricing.component';
+import { ExperienceGuestsBookingComponent } from './components/experience-hosting/forms/experience-guests-booking/experience-guests-booking.component';
+import { ExperienceSubmitReviewComponent } from './components/experience-hosting/forms/experience-submit-review/experience-submit-review.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/', pathMatch: 'full' },
@@ -116,12 +136,9 @@ const routes: Routes = [
 
   { path: 'site-map', component: SiteMapComponent },
 
-  { path: '', component: ExperienceHostingComponent },
-
   //--- MyGuard ---//
   //{ path:  '??', canActivate:[MyGuard], component:  ??Component},
   { path: 'dashboard', component: DashboardComponent },
-  { path: 'experience-hosting', component: ExperienceHostingComponent },
   
   { path: 'saved', component: SavedComponent },
   { path: 'trips', component: TripsComponent },
@@ -140,6 +157,28 @@ const routes: Routes = [
   { path: 'payments/book/authorise', component: PaymentsAuthoriseComponent },
 
   { path: 'reviews/:name/:id', component: ReviewsComponent },
+
+  { path: 'experience-hosting/create', component: ExperienceHostingCreateComponent },
+  { path: 'experience-hosting/listings', component: ExperienceHostingComponent },
+  { path: 'experience-hosting/listings/:id/location', component: ExperienceLocationComponent },
+  { path: 'experience-hosting/listings/:id/type', component: ExperienceTypeComponent },
+  { path: 'experience-hosting/listings/:id/your-languages', component: ExperienceYourLanguagesComponent },
+  { path: 'experience-hosting/listings/:id/your-background', component: ExperienceYourBackgroundComponent },
+  { path: 'experience-hosting/listings/:id/about-you', component: ExperienceAboutYouComponent },
+  { path: 'experience-hosting/listings/:id/what-will-you-do', component: ExperienceWhatWillYouDoComponent },
+  { path: 'experience-hosting/listings/:id/describe-each-place', component: ExperienceDescribeEachPlaceComponent },
+  { path: 'experience-hosting/listings/:id/what-i-will-provide', component: ExperienceWhatIWillProvideComponent },
+  { path: 'experience-hosting/listings/:id/guests-should-bring', component: ExperienceGuestsShouldBringComponent },
+  { path: 'experience-hosting/listings/:id/experience-title', component: ExperienceTitleComponent },
+  { path: 'experience-hosting/listings/:id/experience-photos', component: ExperiencePhotosComponent },
+  { path: 'experience-hosting/listings/:id/experience-map', component: ExperienceMapComponent },
+  { path: 'experience-hosting/listings/:id/experience-notes', component: ExperienceNotesComponent },
+  { path: 'experience-hosting/listings/:id/experience-requirements', component: ExperienceGuestsRequirementsComponent },
+  { path: 'experience-hosting/listings/:id/experience-size', component: ExperienceGuestsSizeComponent },
+  { path: 'experience-hosting/listings/:id/experience-duration', component: ExperienceGuestsDurationComponent },
+  { path: 'experience-hosting/listings/:id/experience-pricing', component: ExperienceGuestsPricingComponent },
+  { path: 'experience-hosting/listings/:id/experience-booking', component: ExperienceGuestsBookingComponent },
+  { path: 'experience-hosting/listings/:id/submit-review', component: ExperienceSubmitReviewComponent },
 
   //--- Placed at end ---//
   { path: 'page-not-found', component: PageNotFoundComponent },

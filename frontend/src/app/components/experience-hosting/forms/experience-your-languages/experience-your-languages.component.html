@@ -1,0 +1,707 @@
+<div class="main mt-5">
+    <div class="contact-content">
+        <div class="container">
+      
+            <div class="row">
+                <div class="col col-md-9">
+                    <h3 class="title">{{ pageHeading }} <small class="ml-4 text-muted">{{ pageSteps }}</small></h3>
+                    <p class="description">{{ pageDescription }}</p>
+                </div>
+                <div class="col col-md-3 text-right mt-3">
+                    <button class="btn btn-outline-primary btn-sm">Save & Exit</button>
+                </div>
+            </div>
+    
+            <div class="featurette-divider fd-100"></div>  
+        
+            <div class="row mt-5 justify-content-md-left">
+                <div class="col-sm-6 ml-auto mr-auto">
+
+                    <form [formGroup]="languagesForm" (ngSubmit)="onSubmit()">
+                        <div class="mh-290">
+                                      
+                            /* bug: refresh browser to expose select options? */
+                            /* Angular ng-if not true */
+                            
+                            <div class="form-group">
+                                <div><label for="language_main" class="bmd-label-floating">What is your main language?</label></div>
+                                <div class="dropdown bootstrap-select mt-3">
+                                    <select id="language_main" formControlName="language_main" title="Choose a language" class="selectpicker" data-style="select-with-transition" data-size="7" tabindex="-98" [ngClass]="{ 'is-invalid': submitted && f.language_main.errors }">
+                                        <option [value]="language_main.val" *ngFor="let language_main of language_mainList">{{ language_main.name }}</option>  
+                                  </select>
+                                </div>
+                                <div *ngIf="submitted && f.language_main.errors" class="invalid-feedback">
+                                    <div *ngIf="f.language_main.errors.required">Theme is required</div>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group mt-5">
+                                <div><label for="language_other" class="bmd-label-floating">What other languages??</label></div>
+
+                                <div class="row mt-3">
+                                    <div class="col col-sm-4">  
+                                        <div class="form-check">
+                                            <label class="form-check-label">
+                                              <input class="form-check-input" type="checkbox" value="de">
+                                              Deutsch
+                                              <span class="form-check-sign">
+                                                <span class="check"></span>
+                                              </span>
+                                            </label>
+                                          </div>
+                                    </div>
+                                    <div class="col col-sm-4">   
+                                        <div class="form-check">
+                                            <label class="form-check-label">
+                                              <input class="form-check-input" type="checkbox" value="hi">
+                                              हिन्दी
+                                              <span class="form-check-sign">
+                                                <span class="check"></span>
+                                              </span>
+                                            </label>
+                                          </div>
+                                    </div>
+                                    <div class="col col-sm-4">  
+                                        <div class="form-check">
+                                            <label class="form-check-label">
+                                              <input class="form-check-input" type="checkbox" value="pt">
+                                              Português
+                                              <span class="form-check-sign">
+                                                <span class="check"></span>
+                                              </span>
+                                            </label>
+                                          </div>
+                                    </div>
+                                </div>
+
+                                <div class="row mt-3">
+                                    <div class="col col-sm-4">  
+                                        <div class="form-check">
+                                            <label class="form-check-label">
+                                              <input class="form-check-input" type="checkbox" value="it">
+                                              Lietuvių
+                                              <span class="form-check-sign">
+                                                <span class="check"></span>
+                                              </span>
+                                            </label>
+                                          </div>
+                                    </div>
+                                    <div class="col col-sm-4">   
+                                        <div class="form-check">
+                                            <label class="form-check-label">
+                                              <input class="form-check-input" type="checkbox" value="hr">
+                                              Hrvatski
+                                              <span class="form-check-sign">
+                                                <span class="check"></span>
+                                              </span>
+                                            </label>
+                                          </div>
+                                    </div>
+                                    <div class="col col-sm-4">  
+                                        <div class="form-check">
+                                            <label class="form-check-label">
+                                              <input class="form-check-input" type="checkbox" value="iv">
+                                              Latviešu
+                                              <span class="form-check-sign">
+                                                <span class="check"></span>
+                                              </span>
+                                            </label>
+                                          </div>
+                                    </div>
+                                </div>
+
+                                <div class="row mt-3">
+                                    <div class="col col-sm-4">  
+                                        <div class="form-check">
+                                            <label class="form-check-label">
+                                              <input class="form-check-input" type="checkbox" value="hu">
+                                              Magyar
+                                              <span class="form-check-sign">
+                                                <span class="check"></span>
+                                              </span>
+                                            </label>
+                                          </div>
+                                    </div>
+                                    <div class="col col-sm-4">   
+                                        <div class="form-check">
+                                            <label class="form-check-label">
+                                              <input class="form-check-input" type="checkbox" value="hy">
+                                              Հայերեն
+                                              <span class="form-check-sign">
+                                                <span class="check"></span>
+                                              </span>
+                                            </label>
+                                          </div>
+                                    </div>
+                                    <div class="col col-sm-4">  
+                                        <div class="form-check">
+                                            <label class="form-check-label">
+                                              <input class="form-check-input" type="checkbox" value="uk">
+                                              Українська
+                                              <span class="form-check-sign">
+                                                <span class="check"></span>
+                                              </span>
+                                            </label>
+                                          </div>
+                                    </div>
+                                </div>
+
+                                <div class="row mt-3">
+                                    <div class="col col-sm-4">  
+                                        <div class="form-check">
+                                            <label class="form-check-label">
+                                              <input class="form-check-input" type="checkbox" value="id">
+                                              Bahasa Indonesia
+                                              <span class="form-check-sign">
+                                                <span class="check"></span>
+                                              </span>
+                                            </label>
+                                          </div>
+                                    </div>
+                                    <div class="col col-sm-4">   
+                                        <div class="form-check">
+                                            <label class="form-check-label">
+                                              <input class="form-check-input" type="checkbox" value="mk">
+                                              Македонски
+                                              <span class="form-check-sign">
+                                                <span class="check"></span>
+                                              </span>
+                                            </label>
+                                          </div>
+                                    </div>
+                                    <div class="col col-sm-4">  
+                                        <div class="form-check">
+                                            <label class="form-check-label">
+                                              <input class="form-check-input" type="checkbox" value="ms">
+                                              Bahasa Melayu
+                                              <span class="form-check-sign">
+                                                <span class="check"></span>
+                                              </span>
+                                            </label>
+                                          </div>
+                                    </div>
+                                </div>
+
+                                <div class="row mt-3">
+                                    <div class="col col-sm-4">  
+                                        <div class="form-check">
+                                            <label class="form-check-label">
+                                              <input class="form-check-input" type="checkbox" value="el">
+                                              Eλληνικά
+                                              <span class="form-check-sign">
+                                                <span class="check"></span>
+                                              </span>
+                                            </label>
+                                          </div>
+                                    </div>
+                                    <div class="col col-sm-4">   
+                                        <div class="form-check">
+                                            <label class="form-check-label">
+                                              <input class="form-check-input" type="checkbox" value="mt">
+                                              Malti
+                                              <span class="form-check-sign">
+                                                <span class="check"></span>
+                                              </span>
+                                            </label>
+                                          </div>
+                                    </div>
+                                    <div class="col col-sm-4">  
+                                        <div class="form-check">
+                                            <label class="form-check-label">
+                                              <input class="form-check-input" type="checkbox" value="en">
+                                              English
+                                              <span class="form-check-sign">
+                                                <span class="check"></span>
+                                              </span>
+                                            </label>
+                                          </div>
+                                    </div>
+                                </div>
+
+                                <div class="row mt-3">
+                                    <div class="col col-sm-4">  
+                                        <div class="form-check">
+                                            <label class="form-check-label">
+                                              <input class="form-check-input" type="checkbox" value="is">
+                                              Íslenska
+                                              <span class="form-check-sign">
+                                                <span class="check"></span>
+                                              </span>
+                                            </label>
+                                          </div>
+                                    </div>
+                                    <div class="col col-sm-4">   
+                                        <div class="form-check">
+                                            <label class="form-check-label">
+                                              <input class="form-check-input" type="checkbox" value="it">
+                                              Italiano
+                                              <span class="form-check-sign">
+                                                <span class="check"></span>
+                                              </span>
+                                            </label>
+                                          </div>
+                                    </div>
+                                    <div class="col col-sm-4">  
+                                        <div class="form-check">
+                                            <label class="form-check-label">
+                                              <input class="form-check-input" type="checkbox" value="zh">
+                                              中文 (简体)
+                                              <span class="form-check-sign">
+                                                <span class="check"></span>
+                                              </span>
+                                            </label>
+                                          </div>
+                                    </div>
+                                </div>
+
+                                <div class="row mt-3">
+                                    <div class="col col-sm-4">  
+                                        <div class="form-check">
+                                            <label class="form-check-label">
+                                              <input class="form-check-input" type="checkbox" value="es">
+                                              Español
+                                              <span class="form-check-sign">
+                                                <span class="check"></span>
+                                              </span>
+                                            </label>
+                                          </div>
+                                    </div>
+                                    <div class="col col-sm-4">   
+                                        <div class="form-check">
+                                            <label class="form-check-label">
+                                              <input class="form-check-input" type="checkbox" value="et">
+                                              Eesti
+                                              <span class="form-check-sign">
+                                                <span class="check"></span>
+                                              </span>
+                                            </label>
+                                          </div>
+                                    </div>
+                                    <div class="col col-sm-4">  
+                                        <div class="form-check">
+                                            <label class="form-check-label">
+                                              <input class="form-check-input" type="checkbox" value="ar">
+                                              العربية
+                                              <span class="form-check-sign">
+                                                <span class="check"></span>
+                                              </span>
+                                            </label>
+                                          </div>
+                                    </div>
+                                </div>
+
+                                <div class="row mt-3">
+                                    <div class="col col-sm-4">  
+                                        <div class="form-check">
+                                            <label class="form-check-label">
+                                              <input class="form-check-input" type="checkbox" value="vi">
+                                              Tiếng Việt
+                                              <span class="form-check-sign">
+                                                <span class="check"></span>
+                                              </span>
+                                            </label>
+                                          </div>
+                                    </div>
+                                    <div class="col col-sm-4">   
+                                        <div class="form-check">
+                                            <label class="form-check-label">
+                                              <input class="form-check-input" type="checkbox" value="ja">
+                                              日本語
+                                              <span class="form-check-sign">
+                                                <span class="check"></span>
+                                              </span>
+                                            </label>
+                                          </div>
+                                    </div>
+                                    <div class="col col-sm-4">  
+                                        <div class="form-check">
+                                            <label class="form-check-label">
+                                              <input class="form-check-input" type="checkbox" value="az">
+                                              Azərbaycan dili
+                                              <span class="form-check-sign">
+                                                <span class="check"></span>
+                                              </span>
+                                            </label>
+                                          </div>
+                                    </div>
+                                </div>
+
+                                <div class="row mt-3">
+                                    <div class="col col-sm-4">  
+                                        <div class="form-check">
+                                            <label class="form-check-label">
+                                              <input class="form-check-input" type="checkbox" value="zu">
+                                              isiZulu
+                                              <span class="form-check-sign">
+                                                <span class="check"></span>
+                                              </span>
+                                            </label>
+                                          </div>
+                                    </div>
+                                    <div class="col col-sm-4">   
+                                        <div class="form-check">
+                                            <label class="form-check-label">
+                                              <input class="form-check-input" type="checkbox" value="ro">
+                                              Română
+                                              <span class="form-check-sign">
+                                                <span class="check"></span>
+                                              </span>
+                                            </label>
+                                          </div>
+                                    </div>
+                                    <div class="col col-sm-4">  
+                                        <div class="form-check">
+                                            <label class="form-check-label">
+                                              <input class="form-check-input" type="checkbox" value="nl">
+                                              Nederlands
+                                              <span class="form-check-sign">
+                                                <span class="check"></span>
+                                              </span>
+                                            </label>
+                                          </div>
+                                    </div>
+                                </div>
+
+                                <div class="row mt-3">
+                                    <div class="col col-sm-4">  
+                                        <div class="form-check">
+                                            <label class="form-check-label">
+                                              <input class="form-check-input" type="checkbox" value="no">
+                                              Norsk
+                                              <span class="form-check-sign">
+                                                <span class="check"></span>
+                                              </span>
+                                            </label>
+                                          </div>
+                                    </div>
+                                    <div class="col col-sm-4">   
+                                        <div class="form-check">
+                                            <label class="form-check-label">
+                                              <input class="form-check-input" type="checkbox" value="fi">
+                                              Suomi
+                                              <span class="form-check-sign">
+                                                <span class="check"></span>
+                                              </span>
+                                            </label>
+                                          </div>
+                                    </div>
+                                    <div class="col col-sm-4">  
+                                        <div class="form-check">
+                                            <label class="form-check-label">
+                                              <input class="form-check-input" type="checkbox" value="ru">
+                                              Русский
+                                              <span class="form-check-sign">
+                                                <span class="check"></span>
+                                              </span>
+                                            </label>
+                                          </div>
+                                    </div>
+                                </div>
+
+                                <div class="row mt-3">
+                                    <div class="col col-sm-4">  
+                                        <div class="form-check">
+                                            <label class="form-check-label">
+                                              <input class="form-check-input" type="checkbox" value="bg">
+                                              Български
+                                              <span class="form-check-sign">
+                                                <span class="check"></span>
+                                              </span>
+                                            </label>
+                                          </div>
+                                    </div>
+                                    <div class="col col-sm-4">   
+                                        <div class="form-check">
+                                            <label class="form-check-label">
+                                              <input class="form-check-input" type="checkbox" value="fr">
+                                              Français
+                                              <span class="form-check-sign">
+                                                <span class="check"></span>
+                                              </span>
+                                            </label>
+                                          </div>
+                                    </div>
+                                    <div class="col col-sm-4">  
+                                        <div class="form-check">
+                                            <label class="form-check-label">
+                                              <input class="form-check-input" type="checkbox" value="sr_ME">
+                                              Crnogorski
+                                              <span class="form-check-sign">
+                                                <span class="check"></span>
+                                              </span>
+                                            </label>
+                                          </div>
+                                    </div>
+                                </div>
+
+                                <div class="row mt-3">
+                                    <div class="col col-sm-4">  
+                                        <div class="form-check">
+                                            <label class="form-check-label">
+                                              <input class="form-check-input" type="checkbox" value="bs">
+                                              Bosanski
+                                              <span class="form-check-sign">
+                                                <span class="check"></span>
+                                              </span>
+                                            </label>
+                                          </div>
+                                    </div>
+                                    <div class="col col-sm-4">   
+                                        <div class="form-check">
+                                            <label class="form-check-label">
+                                              <input class="form-check-input" type="checkbox" value="ka">
+                                              ქართული
+                                              <span class="form-check-sign">
+                                                <span class="check"></span>
+                                              </span>
+                                            </label>
+                                          </div>
+                                    </div>
+                                    <div class="col col-sm-4">  
+                                        <div class="form-check">
+                                            <label class="form-check-label">
+                                              <input class="form-check-input" type="checkbox" value="sk">
+                                              Slovenčina
+                                              <span class="form-check-sign">
+                                                <span class="check"></span>
+                                              </span>
+                                            </label>
+                                          </div>
+                                    </div>
+                                </div>
+
+                                <div class="row mt-3">
+                                    <div class="col col-sm-4">  
+                                        <div class="form-check">
+                                            <label class="form-check-label">
+                                              <input class="form-check-input" type="checkbox" value="sl">
+                                              Slovenščina
+                                              <span class="form-check-sign">
+                                                <span class="check"></span>
+                                              </span>
+                                            </label>
+                                          </div>
+                                    </div>
+                                    <div class="col col-sm-4">   
+                                        <div class="form-check">
+                                            <label class="form-check-label">
+                                              <input class="form-check-input" type="checkbox" value="ga">
+                                              Gaeilge
+                                              <span class="form-check-sign">
+                                                <span class="check"></span>
+                                              </span>
+                                            </label>
+                                          </div>
+                                    </div>
+                                    <div class="col col-sm-4">  
+                                        <div class="form-check">
+                                            <label class="form-check-label">
+                                              <input class="form-check-input" type="checkbox" value="ca">
+                                              Català
+                                              <span class="form-check-sign">
+                                                <span class="check"></span>
+                                              </span>
+                                            </label>
+                                          </div>
+                                    </div>
+                                </div>
+
+                                <div class="row mt-3">
+                                    <div class="col col-sm-4">  
+                                        <div class="form-check">
+                                            <label class="form-check-label">
+                                              <input class="form-check-input" type="checkbox" value="sq">
+                                              Shqip
+                                              <span class="form-check-sign">
+                                                <span class="check"></span>
+                                              </span>
+                                            </label>
+                                          </div>
+                                    </div>
+                                    <div class="col col-sm-4">   
+                                        <div class="form-check">
+                                            <label class="form-check-label">
+                                              <input class="form-check-input" type="checkbox" value="sr">
+                                              Srpski
+                                              <span class="form-check-sign">
+                                                <span class="check"></span>
+                                              </span>
+                                            </label>
+                                          </div>
+                                    </div>
+                                    <div class="col col-sm-4">  
+                                        <div class="form-check">
+                                            <label class="form-check-label">
+                                              <input class="form-check-input" type="checkbox" value="sv">
+                                              Svenska
+                                              <span class="form-check-sign">
+                                                <span class="check"></span>
+                                              </span>
+                                            </label>
+                                          </div>
+                                    </div>
+                                </div>
+
+                                <div class="row mt-3">
+                                    <div class="col col-sm-4">  
+                                        <div class="form-check">
+                                            <label class="form-check-label">
+                                              <input class="form-check-input" type="checkbox" value="sw">
+                                              Kiswahili
+                                              <span class="form-check-sign">
+                                                <span class="check"></span>
+                                              </span>
+                                            </label>
+                                          </div>
+                                    </div>
+                                    <div class="col col-sm-4">   
+                                        <div class="form-check">
+                                            <label class="form-check-label">
+                                              <input class="form-check-input" type="checkbox" value="ko">
+                                              한국어
+                                              <span class="form-check-sign">
+                                                <span class="check"></span>
+                                              </span>
+                                            </label>
+                                          </div>
+                                    </div>
+                                    <div class="col col-sm-4">  
+                                        <div class="form-check">
+                                            <label class="form-check-label">
+                                              <input class="form-check-input" type="checkbox" value="zh_TW">
+                                              中文 (繁體)
+                                              <span class="form-check-sign">
+                                                <span class="check"></span>
+                                              </span>
+                                            </label>
+                                          </div>
+                                    </div>
+                                </div>
+
+                                <div class="row mt-3">
+                                    <div class="col col-sm-4">  
+                                        <div class="form-check">
+                                            <label class="form-check-label">
+                                              <input class="form-check-input" type="checkbox" value="cs">
+                                              Čeština
+                                              <span class="form-check-sign">
+                                                <span class="check"></span>
+                                              </span>
+                                            </label>
+                                          </div>
+                                    </div>
+                                    <div class="col col-sm-4">   
+                                        <div class="form-check">
+                                            <label class="form-check-label">
+                                              <input class="form-check-input" type="checkbox" value="xh">
+                                              isiXhosa
+                                              <span class="form-check-sign">
+                                                <span class="check"></span>
+                                              </span>
+                                            </label>
+                                          </div>
+                                    </div>
+                                    <div class="col col-sm-4">  
+                                        <div class="form-check">
+                                            <label class="form-check-label">
+                                              <input class="form-check-input" type="checkbox" value="th">
+                                              ภาษาไทย
+                                              <span class="form-check-sign">
+                                                <span class="check"></span>
+                                              </span>
+                                            </label>
+                                          </div>
+                                    </div>
+                                </div>
+
+                                <div class="row mt-3">
+                                    <div class="col col-sm-4">  
+                                        <div class="form-check">
+                                            <label class="form-check-label">
+                                              <input class="form-check-input" type="checkbox" value="tl">
+                                              Tagalog
+                                              <span class="form-check-sign">
+                                                <span class="check"></span>
+                                              </span>
+                                            </label>
+                                          </div>
+                                    </div>
+                                    <div class="col col-sm-4">   
+                                        <div class="form-check">
+                                            <label class="form-check-label">
+                                              <input class="form-check-input" type="checkbox" value="pl">
+                                              Polski
+                                              <span class="form-check-sign">
+                                                <span class="check"></span>
+                                              </span>
+                                            </label>
+                                          </div>
+                                    </div>
+                                    <div class="col col-sm-4">  
+                                        <div class="form-check">
+                                            <label class="form-check-label">
+                                              <input class="form-check-input" type="checkbox" value="da">
+                                              Dansk
+                                              <span class="form-check-sign">
+                                                <span class="check"></span>
+                                              </span>
+                                            </label>
+                                          </div>
+                                    </div>
+                                </div>
+
+                                <div class="row mt-3">
+                                    <div class="col col-sm-4">  
+                                        <div class="form-check">
+                                            <label class="form-check-label">
+                                              <input class="form-check-input" type="checkbox" value="he">
+                                              עברית
+                                              <span class="form-check-sign">
+                                                <span class="check"></span>
+                                              </span>
+                                            </label>
+                                          </div>
+                                    </div>
+                                    <div class="col col-sm-4">   
+                                        <div class="form-check">
+                                            <label class="form-check-label">
+                                              <input class="form-check-input" type="checkbox" value="tr">
+                                              Türkçe
+                                              <span class="form-check-sign">
+                                                <span class="check"></span>
+                                              </span>
+                                            </label>
+                                          </div>
+                                    </div>
+                                    <div class="col col-sm-4">  
+                                        
+                                    </div>
+                                </div>
+
+
+
+                            </div>
+            
+                        </div>
+            
+                        <div class="form-group"><div id="form_callback"></div></div>
+            
+                        <div class="form-group mt-5">
+                            <a routerLink="{{ btnBackUrl }}">
+                              <button class="btn btn-outline-primary" type="button">Back</button>
+                            </a>
+                          <button id="btn-location" class="btn btn-danger pull-right" type="submit" data-json='{ "action":"", "auth":"", "pid":, "tkn":"", "uid":"" }'>
+                            <span class="btn_tx">{{ formBtnText }}</span>
+                          </button>
+                        </div>
+            
+                    </form>
+
+                </div> 
+                <div class="col-sm-6 ml-auto mr-auto"></div>
+            </div>
+
+        </div> 
+    </div> 
+</div> 
+

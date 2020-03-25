@@ -1,7 +1,12 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import {  ReactiveFormsModule,
+          FormsModule,
+          FormGroup,
+          FormControl,
+          Validators,
+          FormBuilder } from '@angular/forms';
 import { AgmCoreModule } from '@agm/core';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -46,8 +51,6 @@ import { DestinationComponent } from './components/destination/destination.compo
 
 import { SiteMapComponent } from './components/site-map/site-map.component';
 
-import { ExperienceHostingComponent } from './components/experience-hosting/experience-hosting.component';
-
 import { SavedComponent } from './components/saved/saved.component';
 import { TripsComponent } from './components/trips/trips.component';
 
@@ -65,6 +68,30 @@ import { PaymentsConfirmComponent } from './components/payments-confirm/payments
 import { PaymentsAuthoriseComponent } from './components/payments-authorise/payments-authorise.component';
 import { InboxComponent } from './components/inbox/inbox.component';
 import { ReviewsComponent } from './components/reviews/reviews.component';
+
+/* experience-hosting */
+import { ExperienceHostingComponent } from './components/experience-hosting/experience-hosting.component';
+import { ExperienceHostingCreateComponent } from './components/experience-hosting-create/experience-hosting-create.component';
+import { ExperienceLocationComponent } from './components/experience-hosting/forms/experience-location/experience-location.component';
+import { ExperienceTypeComponent } from './components/experience-hosting/forms/experience-type/experience-type.component';
+import { ExperienceYourLanguagesComponent } from './components/experience-hosting/forms/experience-your-languages/experience-your-languages.component';
+import { ExperienceYourBackgroundComponent } from './components/experience-hosting/forms/experience-your-background/experience-your-background.component';
+import { ExperienceAboutYouComponent } from './components/experience-hosting/forms/experience-about-you/experience-about-you.component';
+import { ExperienceWhatWillYouDoComponent } from './components/experience-hosting/forms/experience-what-will-you-do/experience-what-will-you-do.component';
+import { ExperienceDescribeEachPlaceComponent } from './components/experience-hosting/forms/experience-describe-each-place/experience-describe-each-place.component';
+import { ExperienceWhatIWillProvideComponent } from './components/experience-hosting/forms/experience-what-iwill-provide/experience-what-iwill-provide.component';
+import { ExperienceGuestsShouldBringComponent } from './components/experience-hosting/forms/experience-guests-should-bring/experience-guests-should-bring.component';
+import { ExperienceTitleComponent } from './components/experience-hosting/forms/experience-title/experience-title.component';
+import { ExperiencePhotosComponent } from './components/experience-hosting/forms/experience-photos/experience-photos.component';
+import { ExperienceMapComponent } from './components/experience-hosting/forms/experience-map/experience-map.component';
+import { ExperienceNotesComponent } from './components/experience-hosting/forms/experience-notes/experience-notes.component';
+import { ExperienceGuestsRequirementsComponent } from './components/experience-hosting/forms/experience-guests-requirements/experience-guests-requirements.component';
+import { ExperienceGuestsSizeComponent } from './components/experience-hosting/forms/experience-guests-size/experience-guests-size.component';
+import { ExperienceGuestsDurationComponent } from './components/experience-hosting/forms/experience-guests-duration/experience-guests-duration.component';
+import { ExperienceGuestsPricingComponent } from './components/experience-hosting/forms/experience-guests-pricing/experience-guests-pricing.component';
+import { ExperienceGuestsBookingComponent } from './components/experience-hosting/forms/experience-guests-booking/experience-guests-booking.component';
+import { ExperienceSubmitReviewComponent } from './components/experience-hosting/forms/experience-submit-review/experience-submit-review.component';
+
 
 @NgModule({
   declarations: [
@@ -98,7 +125,6 @@ import { ReviewsComponent } from './components/reviews/reviews.component';
     ExperiencesComponent,
     GearComponent,
     SiteMapComponent,
-    ExperienceHostingComponent,
     SavedComponent,
     TripsComponent,
     AccountSettingsComponent,
@@ -115,7 +141,28 @@ import { ReviewsComponent } from './components/reviews/reviews.component';
     PaymentsConfirmComponent,
     PaymentsAuthoriseComponent,
     InboxComponent,
-    ReviewsComponent
+    ReviewsComponent,
+    ExperienceHostingComponent,
+    ExperienceHostingCreateComponent,
+    ExperienceLocationComponent,
+    ExperienceTypeComponent,
+    ExperienceYourLanguagesComponent,
+    ExperienceYourBackgroundComponent,
+    ExperienceAboutYouComponent,
+    ExperienceWhatWillYouDoComponent,
+    ExperienceDescribeEachPlaceComponent,
+    ExperienceWhatIWillProvideComponent,
+    ExperienceGuestsShouldBringComponent,
+    ExperienceTitleComponent,
+    ExperiencePhotosComponent,
+    ExperienceMapComponent,
+    ExperienceNotesComponent,
+    ExperienceGuestsRequirementsComponent,
+    ExperienceGuestsSizeComponent,
+    ExperienceGuestsDurationComponent,
+    ExperienceGuestsPricingComponent,
+    ExperienceGuestsBookingComponent,
+    ExperienceSubmitReviewComponent
   ],
   imports: [
     BrowserModule,
